@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Valentine's Day</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <audio id="bg-music" loop autoplay>
+        <source src="assets/glue_song.mp3" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
+
+    <div class="container">
+        <div class="envelope" id="envelope">
+            <div class="flap"></div>
+            <div class="body"></div>
+            <div class="cover">
+                <h1>Happy Valentine's Day!</h1>
+                <img src="assets/stickers.png" alt="Cute Stickers">
+            </div>
+            <div class="letter hidden" id="letter">
+                <p>Dear Charish...</p>
+                <p>HAPPY VALENTINES BBEBUU KOOH ❤️ Ever since we met, I never knew you’d mean so much to me...</p>
+                <a href="valentine.html" class="next-btn">Next</a>
+            </div>
+        </div>
+
+        <!-- Button to open the letter -->
+        <button id="open-letter">Open Letter</button>
+    </div>
+
+    <!-- Basic CSS -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ffcccb;
+            text-align: center;
+            padding: 20px;
+        }
+        .container {
+            position: relative;
+            margin: auto;
+            width: 300px;
+        }
+        .envelope {
+            padding: 20px;
+            border: 2px solid #000;
+            background-color: #fff;
+            border-radius: 10px;
+            transition: transform 0.5s;
+        }
+        .cover {
+            display: block;
+        }
+        .letter.hidden {
+            display: none;
+        }
+    </style>
+
+    <!-- Basic JavaScript -->
+    <script>
+        document.getElementById('open-letter').addEventListener('click', function () {
+            document.getElementById('cover').style.display = 'none';
+            document.getElementById('letter').classList.toggle('hidden');
+        });
+    </script>
+
+</body>
+</html>
